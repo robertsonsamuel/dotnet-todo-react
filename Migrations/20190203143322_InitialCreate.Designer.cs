@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TodoApp.AspNetCore.Models;
+using TodoApp.Models;
 
-namespace todo_app.Migrations
+namespace TodoApp.Migrations
 {
-    [DbContext(typeof(TodoContext))]
+    [DbContext(typeof(RepositoryContext))]
     [Migration("20190203143322_InitialCreate")]
     partial class InitialCreate
     {

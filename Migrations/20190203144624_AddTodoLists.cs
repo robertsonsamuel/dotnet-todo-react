@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace todo_app.Migrations
+namespace TodoApp.Migrations
 {
     public partial class AddTodoLists : Migration
     {

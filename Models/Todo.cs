@@ -1,4 +1,4 @@
-namespace TodoApp.AspNetCore.Models
+namespace TodoApp.Models
 {
   public class Todo
   {

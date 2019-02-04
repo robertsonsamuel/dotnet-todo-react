@@ -1,5 +1,5 @@
 ﻿using System;
-namespace todo_app.Interfaces
+namespace TodoApp.Interfaces
 {
     public class EmptyClass
     {

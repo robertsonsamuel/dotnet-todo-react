@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TodoApp.AspNetCore.Models;
-using Microsoft.EntityFrameworkCore;
+using TodoApp.Extensions;
 
-namespace todo_app
+namespace TodoApp
 {
     public class Startup
     {
@@ -23,10 +22,9 @@ namespace todo_app
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.ConfigurePostgreSQLContext(Configuration);
 
-            // Of course we would replace with with and ENV variable
-            var connection = "Server=localhost;Port=5433;User Id=samuelrobertson;Database=todoapp;ApplicationName=todoapp";
-            services.AddDbContext<TodoContext>(options => options.UseNpgsql(connection));
+            services.ConfigureRepositoryWrapper();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

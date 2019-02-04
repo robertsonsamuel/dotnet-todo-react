@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace todo_app.Migrations
+namespace TodoApp.Migrations
 {
     public partial class AddTodoListName : Migration
     {

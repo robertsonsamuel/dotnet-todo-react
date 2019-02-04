@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using TodoApp.AspNetCore.Models;
+﻿using System;
+using TodoApp.Interfaces;
+using TodoApp.Models;
 
-namespace TodoApp.AspNetCore.Repository
+namespace TodoApp.Repository
 {
-    public class TodoRepository: ITodoListRepository
+    public class TodoRepository: RepositoryBase<Todo>, ITodoRepository
     {
-        public IEnumerable<TodoList> GetAll()
+        public TodoRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
-            throw new System.NotImplementedException();
         }
     }
 }
